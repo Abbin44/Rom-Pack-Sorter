@@ -67,6 +67,9 @@ namespace RomSorter
                     Console.WriteLine("Default case");
                     break;
             }
+
+            if (moveFilesChk.Checked == true)
+                MoveFilesToRoot();
         }
 
         public void RunScan(string region)
@@ -120,20 +123,29 @@ namespace RomSorter
                 {
                     keep = regions.Any(file.Name.Contains);
                     if (keep == false)
-                    {
                         file.Delete();
-                    }
                 }
                 else if(other == true)
                 {
                     keep = allRegs.Any(file.Name.Contains);
                     if (keep == true)
-                    {
                         file.Delete();
-                    }
                 }
             }
         }
 
+        public void MoveFilesToRoot()
+        {
+            string name = string.Empty;
+            int index = 0;
+            foreach (string file in Directory.EnumerateFiles(filePath, "*.*", SearchOption.AllDirectories))
+            {
+                index = file.LastIndexOf(@"\");
+                if (index > 0)
+                    name = file.Substring(index, file.Length - index);
+
+                File.Move(file, filePath + name);
+            }
+        }
     }
 }

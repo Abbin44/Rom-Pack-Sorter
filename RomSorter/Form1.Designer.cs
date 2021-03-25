@@ -34,12 +34,13 @@
             this.regionMenu = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.moveFilesChk = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // sortBtn
             // 
             this.sortBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.sortBtn.Location = new System.Drawing.Point(85, 113);
+            this.sortBtn.Location = new System.Drawing.Point(166, 113);
             this.sortBtn.Name = "sortBtn";
             this.sortBtn.Size = new System.Drawing.Size(75, 23);
             this.sortBtn.TabIndex = 0;
@@ -49,8 +50,7 @@
             // 
             // filePathBox
             // 
-            this.filePathBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.filePathBox.Location = new System.Drawing.Point(12, 41);
+            this.filePathBox.Location = new System.Drawing.Point(15, 41);
             this.filePathBox.Name = "filePathBox";
             this.filePathBox.Size = new System.Drawing.Size(226, 20);
             this.filePathBox.TabIndex = 1;
@@ -72,7 +72,7 @@
             "USA",
             "Japan",
             "Others"});
-            this.regionMenu.Location = new System.Drawing.Point(117, 81);
+            this.regionMenu.Location = new System.Drawing.Point(122, 81);
             this.regionMenu.Name = "regionMenu";
             this.regionMenu.Size = new System.Drawing.Size(121, 21);
             this.regionMenu.TabIndex = 5;
@@ -80,7 +80,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 84);
+            this.label1.Location = new System.Drawing.Point(12, 84);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(108, 13);
             this.label1.TabIndex = 4;
@@ -95,11 +95,22 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Or enter file path manually";
             // 
+            // moveFilesChk
+            // 
+            this.moveFilesChk.AutoSize = true;
+            this.moveFilesChk.Location = new System.Drawing.Point(249, 17);
+            this.moveFilesChk.Name = "moveFilesChk";
+            this.moveFilesChk.Size = new System.Drawing.Size(149, 17);
+            this.moveFilesChk.TabIndex = 7;
+            this.moveFilesChk.Text = "Move all files to root folder";
+            this.moveFilesChk.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(264, 148);
+            this.ClientSize = new System.Drawing.Size(396, 148);
+            this.Controls.Add(this.moveFilesChk);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.regionMenu);
@@ -121,6 +132,7 @@
         private System.Windows.Forms.ComboBox regionMenu;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.CheckBox moveFilesChk;
     }
 }
 

@@ -40,16 +40,21 @@
             // sortBtn
             // 
             this.sortBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.sortBtn.BackColor = System.Drawing.Color.OrangeRed;
+            this.sortBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sortBtn.ForeColor = System.Drawing.Color.Black;
             this.sortBtn.Location = new System.Drawing.Point(166, 113);
             this.sortBtn.Name = "sortBtn";
             this.sortBtn.Size = new System.Drawing.Size(75, 23);
             this.sortBtn.TabIndex = 0;
             this.sortBtn.Text = "Sort";
-            this.sortBtn.UseVisualStyleBackColor = true;
+            this.sortBtn.UseVisualStyleBackColor = false;
             this.sortBtn.Click += new System.EventHandler(this.sortBtn_Click);
             // 
             // filePathBox
             // 
+            this.filePathBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.filePathBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.filePathBox.Location = new System.Drawing.Point(15, 41);
             this.filePathBox.Name = "filePathBox";
             this.filePathBox.Size = new System.Drawing.Size(226, 20);
@@ -57,16 +62,20 @@
             // 
             // browseDir
             // 
+            this.browseDir.BackColor = System.Drawing.Color.OrangeRed;
+            this.browseDir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.browseDir.Location = new System.Drawing.Point(15, 12);
             this.browseDir.Name = "browseDir";
             this.browseDir.Size = new System.Drawing.Size(96, 23);
             this.browseDir.TabIndex = 2;
             this.browseDir.Text = "Browse Directory";
-            this.browseDir.UseVisualStyleBackColor = true;
+            this.browseDir.UseVisualStyleBackColor = false;
             this.browseDir.Click += new System.EventHandler(this.browseDir_Click);
             // 
             // regionMenu
             // 
+            this.regionMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.regionMenu.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.regionMenu.Items.AddRange(new object[] {
             "Europe",
             "USA",
@@ -80,6 +89,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.label1.Location = new System.Drawing.Point(12, 84);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(108, 13);
@@ -89,26 +99,30 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.label2.Location = new System.Drawing.Point(114, 17);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(129, 13);
+            this.label2.Size = new System.Drawing.Size(127, 13);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Or enter file path manually";
+            this.label2.Text = "or enter file path manually";
             // 
             // moveFilesChk
             // 
             this.moveFilesChk.AutoSize = true;
+            this.moveFilesChk.BackColor = System.Drawing.Color.Transparent;
+            this.moveFilesChk.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.moveFilesChk.Location = new System.Drawing.Point(249, 17);
             this.moveFilesChk.Name = "moveFilesChk";
             this.moveFilesChk.Size = new System.Drawing.Size(149, 17);
             this.moveFilesChk.TabIndex = 7;
             this.moveFilesChk.Text = "Move all files to root folder";
-            this.moveFilesChk.UseVisualStyleBackColor = true;
+            this.moveFilesChk.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(396, 148);
             this.Controls.Add(this.moveFilesChk);
             this.Controls.Add(this.label2);
